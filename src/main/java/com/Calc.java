@@ -1,4 +1,4 @@
-package mycalc;
+package com;
 
 import java.util.Scanner;
 
