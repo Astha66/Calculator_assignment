@@ -3,10 +3,7 @@ package com;
 import java.util.Scanner;
 
 public class Calc {
-   public static int add(int a,int b)
-    {
-        return (a+b);
-    }
+   public static int add(int a,int b) { return (a+b); }
     public static int diff(int a,int b)
     {
         return (a-b);
@@ -28,6 +25,7 @@ public class Calc {
         while(true) {
 
             System.out.println("Enter 1 for Addition, 2 for Subtraction, 3 for Multiplication, 4 for division and 5 to exit");
+
             choice=sc.nextInt();
 
             switch (choice)
@@ -68,7 +66,7 @@ public class Calc {
             case 5:
                 System.out.println("Bye!");
                 System.exit(0);break;
-            default:System.out.println("Enter a valid choice");
+            default:System.out.println("Enter a valid choice!");
         }
 
         }
