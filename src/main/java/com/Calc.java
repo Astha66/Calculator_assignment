@@ -3,11 +3,28 @@ package com;
 import java.util.Scanner;
 
 public class Calc {
+   public static int add(int a,int b)
+    {
+        return (a+b);
+    }
+    public static int diff(int a,int b)
+    {
+        return (a-b);
+    }
+    public static int product(int a,int b)
+    {
+        return (a*b);
+    }
+    public static int divide(int a,int b)
+    {
+        return (a/b);
+    }
     public static void main(String[] args)
     {
-        int num1,num2,choice;
+        int num1,num2,choice,ans;
 
         Scanner sc=new Scanner(System.in);
+
         while(true) {
 
             System.out.println("Enter 1 for Addition, 2 for Subtraction, 3 for Multiplication, 4 for division and 5 to exit");
@@ -20,25 +37,34 @@ public class Calc {
                 num1=sc.nextInt();
                 System.out.println("Enter the second number");
                 num2=sc.nextInt();
-                System.out.println("Addition: "+(num1+num2));break;
+                ans=add(num1,num2);
+                System.out.println("Addition: "+ans);
+                break;
+
             case 2:
                 System.out.println("Enter the first number");
                 num1=sc.nextInt();
                 System.out.println("Enter the second number");
                 num2=sc.nextInt();
-                System.out.println("Difference: "+(num1-num2));break;
+                ans=diff(num1,num2);
+                System.out.println("Difference: "+ans);
+                break;
             case 3:
                 System.out.println("Enter the first number");
                 num1=sc.nextInt();
                 System.out.println("Enter the second number");
                 num2=sc.nextInt();
-                System.out.println("Product: "+(num1*num2));break;
+                ans=product(num1,num2);
+                System.out.println("Product: "+ans);
+                break;
             case 4:
                 System.out.println("Enter the first number");
                 num1=sc.nextInt();
                 System.out.println("Enter the second number");
                 num2=sc.nextInt();
-                System.out.println("Division: "+(num1/num2));break;
+                ans=divide(num1,num2);
+                System.out.println("Division: "+ans);
+                break;
             case 5:
                 System.out.println("Bye!");
                 System.exit(0);break;
