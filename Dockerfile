@@ -1,12 +1,4 @@
-FROM ubuntu_java
-
-MAINTAINER Astha_Sharma
-
-# Set Working Directory
-WORKDIR /usr/local
-
-# Copies the files from the source on the host into the container’s set destination
-ADD target/calculator-1.0-SNAPSHOT.jar .
-
-# Default container command
-ENTRYPOINT ["/usr/bin/java", "-cp", "calculator-1.0-SNAPSHOT.jar", "com/Calculator"]
+FROM openjdk:8
+EXPOSE 8080
+ADD target/dockercalc.jar dockercalc.jar
+ENTRYPOINT ["java","-jar","/dockercalc.jar"]
