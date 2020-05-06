@@ -1,6 +1,10 @@
+# Start with a base image containing Java runtime
 FROM openjdk:8
+# Add Maintainer Info
+LABEL maintainer="github.com/Astha66"
+# Make port 8080 available to the world outside this container
 EXPOSE 8080
-#ADD target/dockercalc.jar dockercalc.jar
-HEALTHCHECK --interval=5s \
-            --timeout=5s \
-            CMD curl -f http://127.0.0.1:8080 || exit 1
+# Add the application's jar to the container
+ADD /target/calculator-1.0-SNAPSHOT.jar calculator-1.0-SNAPSHOT.jar
+# Run the jar file
+ENTRYPOINT ["java","-cp","calculator-1.0-SNAPSHOT.jar","com.Calc"]
