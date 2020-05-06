@@ -7,4 +7,4 @@ EXPOSE 8080
 # Add the application's jar to the container
 ADD /target/calculator-1.0-SNAPSHOT.jar calculator-1.0-SNAPSHOT.jar
 # Run the jar file
-ENTRYPOINT ["java","-cp","calculator-1.0-SNAPSHOT.jar","com.Calc"]
+CMD ["java","-cp","calculator-1.0-SNAPSHOT.jar","com.Calc"]
